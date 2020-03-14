@@ -1,0 +1,44 @@
+class Stack:
+    """
+    这是一个用 Python 模拟数据结构栈的原型。这里特别注意：
+    栈顶尾端实现，push 和 pop 的复杂度为O(1)
+    栈顶首端实现，push 和 pop 的复杂度为O(n)
+    O(n)"""
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        #判断栈是否为空
+        return len(self.items)==0
+
+    def push(self, item):
+        #往栈内压入数据项
+        self.items.append(item)#list尾端为栈顶
+        #self.items.insert(0, item) #list头为栈顶
+
+    def pop(self):
+        #返回栈顶值，并删除它
+        return self.items.pop()#list尾端为栈顶
+        #return self.ietm.pop(0) #list头为栈顶
+
+    def peek(self):
+        #返回栈顶值，并不删除它
+        if not self.isEmpty():
+            return self.items[len(self.items)-1]#list尾端为栈顶
+            #return self.items[0]#list头为栈顶
+
+    def size(self):
+        #返回栈大小
+        return len(self.items)
+
+
+
+
+
+
+
+
+
+
+
+
